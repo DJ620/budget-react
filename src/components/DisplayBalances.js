@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Segment } from 'semantic-ui-react';
 import StatisticGroup from "./StatisticGroup";
 
-function DisplayBalances() {
+function DisplayBalances({ incomeTotal, expenseTotal }) {
     return (
         <Segment textAlign="center">
             <Grid columns={2} divided>
@@ -13,7 +13,7 @@ function DisplayBalances() {
                             color="green"
                             textAlign={{textAlign: "left"}}
                             label="Income:"
-                            value="1,045.50"
+                            value={incomeTotal}
                         />
                     </Grid.Column>
                     <Grid.Column>
@@ -22,7 +22,7 @@ function DisplayBalances() {
                             color="red"
                             textAlign={{textAlign: "left"}}
                             label="Expenses"
-                            value="623.50"
+                            value={expenseTotal}
                         />
                     </Grid.Column>
                 </Grid.Row>
